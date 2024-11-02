@@ -7,17 +7,17 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1B3A6D; /* Fondo azul frío oscuro */
+            background-color: #1B3A6D;
             margin: 0;
             padding: 20px;
         }
         .container {
             max-width: 800px;
             margin: auto;
-            background-color: #ffffff; /* Fondo blanco para el contenedor */
+            background-color: #ffffff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px; /* Bordes redondeados para el contenedor */
+            border-radius: 8px;
         }
         h1, h2 {
             color: #2C3E50;
@@ -66,10 +66,9 @@
 <body>
 
     <div class="container">
-        <h1>Circuitos Administrativos y Normas de Control Interno</h1>
-
         <!-- Secciones de la presentación -->
         <div class="section active" id="section1">
+            <h1>Circuitos Administrativos y Normas de Control Interno</h1>
             <h2>Operaciones Básicas de una Empresa</h2>
             <ul>
                 <li>Compras</li>
@@ -189,7 +188,7 @@
             <img src="cheque_comun_argentina.gif" alt="Cheque Común en Argentina">
         </div>
 
-          <div class="section" id="section16">
+        <div class="section" id="section16">
             <h2>Remito</h2>
             <img src="Remito.png" alt="Remito">
         </div>
@@ -218,17 +217,14 @@
 
     <script>
         let currentSection = 1;
-        const totalSections = 19; // Actualizado para incluir la nueva sección
+        const totalSections = 19;
 
         function showSection(sectionNumber) {
-            // Ocultar todas las secciones
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => section.classList.remove('active'));
 
-            // Mostrar la sección actual
             document.getElementById(`section${sectionNumber}`).classList.add('active');
 
-            // Actualizar botones
             document.getElementById('prevBtn').disabled = sectionNumber === 1;
             document.getElementById('nextBtn').disabled = sectionNumber === totalSections;
         }
